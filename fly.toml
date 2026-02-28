@@ -1,0 +1,9 @@
+app = "portfolio-iq5xhu"
+primary_region = "ams"
+
+[build]
+  builder = "nginx"
+
+[http_service]
+  internal_port = 8080
+  force_https = true
