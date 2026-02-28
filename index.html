@@ -4,8 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ibrahim Arif — AI Automation Engineer</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+<link rel="dns-prefetch" href="https://drumhierny.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root {
   --black: #050505;
@@ -16,15 +19,15 @@
   --text: #f5f5f5;
   --muted: #888888;
   --dim: #444444;
-  --gold: #c9a227;
-  --gold2: #e0b84a;
-  --gold3: #f0c96a;
-  --glow: rgba(201,162,39,0.3);
+  --gold: #38bdf8;
+  --gold2: #60cdff;
+  --gold3: #93ddff;
+  --glow: rgba(56,189,248,0.3);
   --white: #ffffff;
   --success: #22c55e;
-  --urgent: #ef4444;
+  --urgent: #38bdf8;
   --ff-heading: 'Space Grotesk', sans-serif;
-  --ff-body: 'Inter', sans-serif;
+  --ff-body: 'DM Sans', sans-serif;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;font-size:16px;}
@@ -46,13 +49,15 @@ body{
   transform:translate(-50%,-50%);
   transition:width .25s,height .25s,background .2s,border .2s;
   box-shadow:0 0 14px var(--gold);
+  will-change:left,top;
 }
 #curR{
   width:40px;height:40px;
-  border:1px solid rgba(201,162,39,.35);border-radius:50%;
+  border:1px solid rgba(56,189,248,.35);border-radius:50%;
   position:fixed;pointer-events:none;z-index:9998;
   transform:translate(-50%,-50%);
   transition:width .35s,height .35s,border-color .3s;
+  will-change:left,top;
 }
 body.hov #cur{width:14px;height:14px;background:transparent;border:2px solid var(--gold);box-shadow:0 0 24px var(--glow);}
 body.hov #curR{width:60px;height:60px;border-color:var(--gold);}
@@ -324,23 +329,23 @@ section.content-sec.alt{background:var(--black2);}
   width:100%;aspect-ratio:1/1;
   object-fit:cover;object-position:center top;
   display:block;border-radius:50%;
-  border:2px solid rgba(201,162,39,.25);
-  box-shadow:0 0 0 8px rgba(201,162,39,.05), 0 24px 60px rgba(0,0,0,.5);
+  border:2px solid rgba(56,189,248,.25);
+  box-shadow:0 0 0 8px rgba(56,189,248,.05), 0 24px 60px rgba(0,0,0,.5);
   transition:all .4s;
 }
 .about-photo-wrap:hover .about-photo{
-  border-color:rgba(201,162,39,.5);
-  box-shadow:0 0 0 12px rgba(201,162,39,.08), 0 0 40px rgba(201,162,39,.15), 0 24px 60px rgba(0,0,0,.5);
+  border-color:rgba(56,189,248,.5);
+  box-shadow:0 0 0 12px rgba(56,189,248,.08), 0 0 40px rgba(56,189,248,.15), 0 24px 60px rgba(0,0,0,.5);
 }
 .about-photo-frame{
   position:absolute;inset:-12px;
-  border:1px solid rgba(201,162,39,.12);
+  border:1px solid rgba(56,189,248,.12);
   border-radius:50%;pointer-events:none;
   animation:ringPulse 4s ease-in-out infinite;
 }
 .about-photo-frame2{
   position:absolute;inset:-24px;
-  border:1px solid rgba(201,162,39,.06);
+  border:1px solid rgba(56,189,248,.06);
   border-radius:50%;pointer-events:none;
   animation:ringPulse 4s ease-in-out infinite 1s;
 }
@@ -375,7 +380,7 @@ section.content-sec.alt{background:var(--black2);}
   transition:background .3s;
 }
 .a-stat:last-child{border-right:none;}
-.a-stat:hover{background:rgba(201,162,39,.03);}
+.a-stat:hover{background:rgba(56,189,248,.03);}
 .a-stat-n{
   font-family:var(--ff-heading);font-size:32px;font-weight:600;
   color:var(--gold);line-height:1;letter-spacing:-1px;margin-bottom:6px;
@@ -399,7 +404,7 @@ section.content-sec.alt{background:var(--black2);}
 }
 .sf-btn.active,.sf-btn:hover{
   border-color:var(--gold);color:var(--gold);
-  background:rgba(201,162,39,.06);
+  background:rgba(56,189,248,.06);
 }
 
 /* ─── STACK BENTO ─── */
@@ -443,7 +448,7 @@ section.content-sec.alt{background:var(--black2);}
 /* Radial glow follows cursor */
 .scard::before{
   content:'';position:absolute;inset:0;
-  background:radial-gradient(circle at var(--mx,50%) var(--my,50%),rgba(201,162,39,.14) 0%,transparent 55%);
+  background:radial-gradient(circle at var(--mx,50%) var(--my,50%),rgba(56,189,248,.14) 0%,transparent 55%);
   opacity:0;transition:opacity .3s;pointer-events:none;
 }
 .scard:hover::before{opacity:1;}
@@ -456,8 +461,8 @@ section.content-sec.alt{background:var(--black2);}
 }
 .scard:hover::after{transform:scaleX(1);}
 .scard:hover{
-  border-color:rgba(201,162,39,.3);
-  box-shadow:0 0 28px rgba(201,162,39,.08),0 8px 24px rgba(0,0,0,.3);
+  border-color:rgba(56,189,248,.3);
+  box-shadow:0 0 28px rgba(56,189,248,.08),0 8px 24px rgba(0,0,0,.3);
 }
 .scard-icon{
   font-size:26px;display:block;margin-bottom:14px;
@@ -491,13 +496,13 @@ section.content-sec.alt{background:var(--black2);}
   position:absolute;left:-5px;top:10px;
   width:11px;height:11px;border-radius:50%;
   background:var(--black2);border:2px solid var(--gold);
-  box-shadow:0 0 0 4px rgba(201,162,39,.1);
+  box-shadow:0 0 0 4px rgba(56,189,248,.1);
   transition:all .5s cubic-bezier(.22,1,.36,1);z-index:2;
   animation:dotPulse 2.2s ease-in-out infinite;
 }
 .exp-entry:hover .exp-date-node{
   transform:scale(1.5);background:var(--gold);
-  box-shadow:0 0 20px var(--gold),0 0 0 8px rgba(201,162,39,.1);
+  box-shadow:0 0 20px var(--gold),0 0 0 8px rgba(56,189,248,.1);
 }
 .exp-date-range{
   font-family:var(--ff-heading);font-size:13px;color:var(--gold);
@@ -518,11 +523,11 @@ section.content-sec.alt{background:var(--black2);}
 }
 .exp-entry:hover .exp-company-logo{
   transform:scale(1.1) rotate(-3deg);border-color:var(--gold);
-  box-shadow:0 0 30px rgba(201,162,39,.2);
+  box-shadow:0 0 30px rgba(56,189,248,.2);
 }
 .exp-company-logo::before{
   content:'';position:absolute;inset:0;
-  background:linear-gradient(135deg,rgba(201,162,39,.2),transparent);
+  background:linear-gradient(135deg,rgba(56,189,248,.2),transparent);
   opacity:0;transition:opacity .5s;
 }
 .exp-entry:hover .exp-company-logo::before{opacity:1;}
@@ -563,14 +568,14 @@ section.content-sec.alt{background:var(--black2);}
   content:'→';color:var(--gold);font-size:13px;line-height:1.7;
   transition:transform .3s;flex-shrink:0;
 }
-.exp-achievements li:hover{background:rgba(201,162,39,.05);color:var(--text);transform:translateX(6px);}
+.exp-achievements li:hover{background:rgba(56,189,248,.05);color:var(--text);transform:translateX(6px);}
 .exp-achievements li:hover::before{transform:translateX(4px);}
 .exp-stats{
   background:var(--black2);border:1px solid var(--border);
   padding:24px;position:relative;overflow:hidden;transition:all .5s;
 }
 .exp-entry:hover .exp-stats{
-  border-color:rgba(201,162,39,.3);transform:translateY(-4px);
+  border-color:rgba(56,189,248,.3);transform:translateY(-4px);
   box-shadow:0 20px 40px rgba(0,0,0,.4);
 }
 .exp-stats::before{
@@ -601,6 +606,7 @@ section.content-sec.alt{background:var(--black2);}
   display:flex;flex-direction:column;
   position:relative;overflow:hidden;cursor:none;
   transition:background .35s, transform .35s cubic-bezier(.22,1,.36,1);
+  opacity:0;transform:translateX(var(--px,0px)) translateY(44px);
 }
 .proj-card::after{
   content:'';position:absolute;top:0;left:0;right:0;height:2px;
@@ -633,7 +639,7 @@ section.content-sec.alt{background:var(--black2);}
   border:1px solid var(--border);transition:all .25s;
   font-weight:500;
 }
-.proj-card:hover .proj-tag{border-color:rgba(201,162,39,.25);color:rgba(201,162,39,.8);}
+.proj-card:hover .proj-tag{border-color:rgba(56,189,248,.25);color:rgba(56,189,248,.8);}
 .proj-btn{
   font-family:var(--ff-body);font-size:12px;
   color:var(--dim);background:none;border:none;cursor:none;
@@ -662,7 +668,8 @@ section.content-sec.alt{background:var(--black2);}
   transform:translateY(30px) scale(.97);
   transition:transform .4s cubic-bezier(.22,1,.36,1), opacity .4s;
   opacity:0;
-  box-shadow:0 60px 120px rgba(0,0,0,.8),0 0 0 1px rgba(201,162,39,.1);
+  box-shadow:0 60px 120px rgba(0,0,0,.8),0 0 0 1px rgba(56,189,248,.1);
+  will-change:transform,opacity;
 }
 .mbg.open .mbox{transform:translateY(0) scale(1);opacity:1;}
 .m-close{
@@ -686,7 +693,7 @@ section.content-sec.alt{background:var(--black2);}
 .m-sec-ttl::before{content:'';width:24px;height:1px;background:var(--gold);}
 .m-text{color:rgba(220,218,230,.9);line-height:1.8;font-size:15px;}
 .m-nda{
-  background:rgba(201,162,39,.06);border:1px solid rgba(201,162,39,.15);
+  background:rgba(56,189,248,.06);border:1px solid rgba(56,189,248,.15);
   padding:16px 20px;font-family:var(--ff-body);font-size:12px;
   color:var(--gold2);letter-spacing:.02em;margin:24px 0;
   display:flex;gap:12px;align-items:center;font-weight:500;
@@ -698,11 +705,22 @@ section.content-sec.alt{background:var(--black2);}
   transition:border-color .25s, background .25s;
   font-family:var(--ff-body);font-size:14px;color:rgba(170,166,182,.9);
 }
-.m-flow-step:hover{border-left-color:var(--gold);color:var(--text);background:rgba(201,162,39,.04);}
+.m-flow-step:hover{border-left-color:var(--gold);color:var(--text);background:rgba(56,189,248,.04);}
 .m-flow-n{color:var(--gold);min-width:28px;font-weight:600;font-size:12px;font-family:var(--ff-heading);}
 .m-feats{list-style:none;display:flex;flex-direction:column;gap:12px;}
 .m-feats li{font-size:15px;color:rgba(220,218,230,.9);padding-left:24px;position:relative;line-height:1.7;}
 .m-feats li::before{content:'✓';position:absolute;left:0;color:var(--gold);font-weight:600;font-size:12px;}
+.m-img-wrap{margin:20px 0 32px;border-radius:10px;overflow:hidden;border:1px solid rgba(56,189,248,.15);box-shadow:0 8px 32px rgba(0,0,0,.5);position:relative;cursor:zoom-in;}
+.m-img{width:100%;display:block;border-radius:10px;transition:opacity .2s;}
+.m-img-wrap:hover .m-img{opacity:.88;}
+.m-img-hint{position:absolute;bottom:10px;right:12px;background:rgba(0,0,0,.65);color:var(--gold);font-family:var(--ff-body);font-size:11px;font-weight:600;letter-spacing:.08em;padding:5px 10px;border-radius:4px;pointer-events:none;display:flex;align-items:center;gap:6px;backdrop-filter:blur(4px);}
+/* ─── IMAGE LIGHTBOX ─── */
+#img-lb{position:fixed;inset:0;z-index:1200;background:rgba(0,0,0,.96);display:flex;align-items:center;justify-content:center;padding:24px;opacity:0;pointer-events:none;transition:opacity .25s;}
+#img-lb.open{opacity:1;pointer-events:all;}
+#img-lb img{max-width:100%;max-height:90vh;object-fit:contain;border-radius:6px;box-shadow:0 0 80px rgba(0,0,0,.8);transform:scale(.96);transition:transform .3s cubic-bezier(.22,1,.36,1);}
+#img-lb.open img{transform:scale(1);}
+#img-lb-close{position:fixed;top:20px;right:24px;width:44px;height:44px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);color:#fff;font-size:22px;cursor:pointer;display:flex;align-items:center;justify-content:center;border-radius:50%;transition:all .2s;font-family:var(--ff-body);}
+#img-lb-close:hover{background:rgba(56,189,248,.2);border-color:var(--gold);color:var(--gold);}
 
 /* ─── CONTACT SECTION ─── */
 #contact{
@@ -714,8 +732,8 @@ section.content-sec.alt{background:var(--black2);}
 .ct-bg-grid{
   position:absolute;inset:0;
   background-image:
-    linear-gradient(rgba(201,162,39,.02) 1px,transparent 1px),
-    linear-gradient(90deg,rgba(201,162,39,.02) 1px,transparent 1px);
+    linear-gradient(rgba(56,189,248,.02) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(56,189,248,.02) 1px,transparent 1px);
   background-size:60px 60px;
   mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,black 0%,transparent 70%);
   animation:gridDrift 25s linear infinite;
@@ -724,7 +742,7 @@ section.content-sec.alt{background:var(--black2);}
 @keyframes gridDrift{0%{transform:translateY(0);}100%{transform:translateY(60px);}}
 .ct-orb{
   position:absolute;width:700px;height:700px;border-radius:50%;
-  background:radial-gradient(circle,rgba(201,162,39,.1) 0%,transparent 60%);
+  background:radial-gradient(circle,rgba(56,189,248,.1) 0%,transparent 60%);
   right:-200px;top:50%;transform:translateY(-50%);
   animation:orbPulse 8s ease-in-out infinite;
   pointer-events:none;
@@ -741,14 +759,14 @@ section.content-sec.alt{background:var(--black2);}
 .ct-badge-urgent{
   display:inline-flex;align-items:center;gap:10px;
   padding:10px 18px;
-  background:rgba(239,68,68,.08);
-  border:1px solid rgba(239,68,68,.2);
+  background:rgba(56,189,248,.08);
+  border:1px solid rgba(56,189,248,.2);
   font-family:var(--ff-body);font-size:11px;
   color:var(--urgent);letter-spacing:.1em;text-transform:uppercase;
   margin-bottom:28px;font-weight:600;
   animation:pulseUrgent 2.5s ease-in-out infinite;
 }
-@keyframes pulseUrgent{0%,100%{box-shadow:0 0 0 rgba(239,68,68,0);}50%{box-shadow:0 0 20px rgba(239,68,68,.1);}}
+@keyframes pulseUrgent{0%,100%{box-shadow:0 0 0 rgba(56,189,248,0);}50%{box-shadow:0 0 20px rgba(56,189,248,.1);}}
 .ct-badge-urgent .dot{
   width:6px;height:6px;border-radius:50%;
   background:var(--urgent);
@@ -792,8 +810,8 @@ section.content-sec.alt{background:var(--black2);}
   transform-origin:bottom;transition:transform .4s;
 }
 .ct-pain:hover{
-  background:rgba(201,162,39,.04);
-  border-color:rgba(201,162,39,.2);
+  background:rgba(56,189,248,.04);
+  border-color:rgba(56,189,248,.2);
   transform:translateX(8px);
 }
 .ct-pain:hover::before{transform:scaleY(1);}
@@ -805,7 +823,7 @@ section.content-sec.alt{background:var(--black2);}
   transition:all .3s;
 }
 .ct-pain:hover .ct-pain-icon{
-  background:rgba(201,162,39,.1);
+  background:rgba(56,189,248,.1);
   border-color:var(--gold);
 }
 .ct-pain-text{
@@ -913,7 +931,7 @@ section.content-sec.alt{background:var(--black2);}
   transition:all .3s;
 }
 .ct-value:hover{
-  background:rgba(201,162,39,.06);
+  background:rgba(56,189,248,.06);
   transform:translateX(4px);
 }
 .ct-value-check{
@@ -954,7 +972,7 @@ section.content-sec.alt{background:var(--black2);}
 }
 .ct-cta:hover{
   transform:translateY(-3px) scale(1.01);
-  box-shadow:0 20px 50px rgba(201,162,39,.35);
+  box-shadow:0 20px 50px rgba(56,189,248,.35);
 }
 .ct-cta:hover::before{transform:translateX(100%);}
 
@@ -987,8 +1005,8 @@ section.content-sec.alt{background:var(--black2);}
 .ct-urgency{
   display:flex;align-items:center;justify-content:center;gap:10px;
   padding:12px;
-  background:rgba(239,68,68,.05);
-  border:1px solid rgba(239,68,68,.12);
+  background:rgba(56,189,248,.05);
+  border:1px solid rgba(56,189,248,.12);
   font-family:var(--ff-body);font-size:11px;
   color:rgba(255,180,180,.9);text-align:center;
   font-weight:500;
@@ -1015,8 +1033,8 @@ section.content-sec.alt{background:var(--black2);}
   transition:transform .4s;
 }
 .ct-contact:hover{
-  border-color:rgba(201,162,39,.25);
-  background:rgba(201,162,39,.04);
+  border-color:rgba(56,189,248,.25);
+  background:rgba(56,189,248,.04);
   transform:translateY(-6px);
   box-shadow:0 16px 40px rgba(0,0,0,.4);
 }
@@ -1052,27 +1070,48 @@ footer{
 .ft-dot{display:inline-block;width:6px;height:6px;background:var(--gold);border-radius:50%;box-shadow:0 0 8px var(--gold);margin-right:8px;animation:dotPulse 2s infinite;}
 @keyframes dotPulse{0%,100%{opacity:1;}50%{opacity:.35;}}
 
+/* ─── SCROLL PROGRESS BAR ─── */
+#sp{position:fixed;top:0;left:0;height:3px;width:0;z-index:9999;pointer-events:none;background:linear-gradient(to right,var(--gold),var(--gold2));box-shadow:0 0 12px var(--glow),0 0 24px var(--glow);}
+
 /* ─── SCROLL REVEALS ─── */
 .sr{
-  opacity:0;transform:translateY(40px);
-  transition:all .8s cubic-bezier(.22,1,.36,1);
+  opacity:0;transform:translateY(54px);filter:blur(4px);
+  transition:opacity .9s cubic-bezier(.22,1,.36,1),transform .9s cubic-bezier(.22,1,.36,1),filter .9s cubic-bezier(.22,1,.36,1);
 }
-.sr.vis{opacity:1;transform:translateY(0);}
+.sr.vis{opacity:1;transform:translateY(0);filter:blur(0);}
 .sr-left{
-  opacity:0;transform:translateX(-50px);
-  transition:all 1s cubic-bezier(.22,1,.36,1);
+  opacity:0;transform:translateX(-60px);filter:blur(4px);
+  transition:opacity 1s cubic-bezier(.22,1,.36,1),transform 1s cubic-bezier(.22,1,.36,1),filter 1s cubic-bezier(.22,1,.36,1);
 }
-.sr-left.vis{opacity:1;transform:translateX(0);}
+.sr-left.vis{opacity:1;transform:translateX(0);filter:blur(0);}
 .sr-right{
-  opacity:0;transform:translateX(50px);
-  transition:all 1s cubic-bezier(.22,1,.36,1);
+  opacity:0;transform:translateX(60px);filter:blur(4px);
+  transition:opacity 1s cubic-bezier(.22,1,.36,1),transform 1s cubic-bezier(.22,1,.36,1),filter 1s cubic-bezier(.22,1,.36,1);
 }
-.sr-right.vis{opacity:1;transform:translateX(0);}
+.sr-right.vis{opacity:1;transform:translateX(0);filter:blur(0);}
 .sr-scale{
-  opacity:0;transform:scale(.9);
-  transition:all .8s cubic-bezier(.22,1,.36,1);
+  opacity:0;transform:scale(.88);filter:blur(4px);
+  transition:opacity .9s cubic-bezier(.22,1,.36,1),transform .9s cubic-bezier(.22,1,.36,1),filter .9s cubic-bezier(.22,1,.36,1);
 }
-.sr-scale.vis{opacity:1;transform:scale(1);}
+.sr-scale.vis{opacity:1;transform:scale(1);filter:blur(0);}
+
+/* ─── SECTION HEADING UNDERLINE SWEEP ─── */
+.sec-title{position:relative;}
+.sec-title::after{
+  content:'';position:absolute;bottom:-14px;left:0;
+  height:2px;width:0;border-radius:2px;
+  background:linear-gradient(to right,var(--gold),transparent);
+  box-shadow:0 0 14px var(--glow);
+  transition:width .9s .35s cubic-bezier(.22,1,.36,1);
+}
+.sec-title.vis::after{width:72px;}
+
+/* ─── EXPERIENCE TIMELINE DRAW ─── */
+.exp-tl-line{
+  clip-path:inset(0 0 100% 0);
+  transition:clip-path 2.2s cubic-bezier(.22,1,.36,1);
+}
+.exp-tl-line.tl-drawn{clip-path:inset(0 0 0% 0);}
 .d1{transition-delay:.1s;}
 .d2{transition-delay:.2s;}
 .d3{transition-delay:.3s;}
@@ -1080,12 +1119,9 @@ footer{
 .d5{transition-delay:.5s;}
 
 /* ─── PROJECT CARD ANIMATION ─── */
-.proj-card{
-  opacity:0;transform:translateY(40px);
-}
 .proj-card.dealt{
-  opacity:1;transform:translateY(0);
-  transition:opacity .6s,transform .6s,background .35s;
+  opacity:1;transform:translateX(0) translateY(0);
+  transition:opacity .65s,transform .7s cubic-bezier(.22,1,.36,1),background .35s;
 }
 
 /* ─── RESPONSIVE ─── */
@@ -1158,6 +1194,7 @@ footer{
 </head>
 <body>
 
+<div id="sp"></div>
 <div id="cur"></div>
 <div id="curR"></div>
 
@@ -1337,7 +1374,50 @@ footer{
       </div>
     </div>
 
-    <!-- Experience 2 -->
+    <!-- Experience 2 — Badaaas -->
+    <div class="exp-entry">
+      <div class="exp-date-col">
+        <div class="exp-date-node"></div>
+        <div class="exp-date-range">2025</div>
+        <div class="exp-date-duration">Project-Based</div>
+      </div>
+      <div class="exp-content">
+        <div class="exp-main">
+          <div class="exp-company-header">
+            <div class="exp-company-logo">🎥</div>
+            <div class="exp-company-info">
+              <h3>
+                <a href="https://www.badaaas.com/" target="_blank" rel="noopener">Badaaas</a>
+                <img class="exp-flag" src="https://flagcdn.com/24x18/us.png" alt="USA">
+              </h3>
+              <div class="exp-location">AI Automation • Meeting Intelligence</div>
+            </div>
+          </div>
+          <div class="exp-role">AI Automation Engineer</div>
+          <ul class="exp-achievements">
+            <li>Built a real-time Zoom meeting intelligence system using the Zoom Live Transcript API — capturing live speech and feeding it to AI agents mid-call</li>
+            <li>AI agents analyze the live transcript and auto-populate Google Slides in real time, enabling presenters to share accurate, up-to-date decks directly inside the meeting</li>
+            <li>Integrated Recall.ai as a meeting bot layer for safe, reliable transcript capture on the client side</li>
+            <li>After meeting close: full transcript extracted and sent to a Make.com pipeline that auto-generates a client proposal, manages pricing logic, and handles follow-up distribution — zero manual effort</li>
+          </ul>
+        </div>
+        <div class="exp-stats">
+          <div class="exp-stat-header">Impact Metrics</div>
+          <div class="exp-stat-list">
+            <div class="exp-stat-item">
+              <div class="exp-stat-value">Live</div>
+              <div class="exp-stat-label">Real-time Slide Generation</div>
+            </div>
+            <div class="exp-stat-item">
+              <div class="exp-stat-value">0 min</div>
+              <div class="exp-stat-label">Proposal Delay After Meeting</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Experience 3 -->
     <div class="exp-entry">
       <div class="exp-date-col">
         <div class="exp-date-node"></div>
@@ -1380,7 +1460,7 @@ footer{
       </div>
     </div>
 
-    <!-- Experience 3 -->
+    <!-- Experience 4 -->
     <div class="exp-entry">
       <div class="exp-date-col">
         <div class="exp-date-node"></div>
@@ -1434,12 +1514,15 @@ footer{
     <div class="proj-card" data-p="zoom"><span class="proj-ico">🎙</span><div class="proj-name">Live Zoom Transcription</div><p class="proj-desc">Real-time transcription system that joins Zoom calls, generates meeting notes, and creates Google Slides summaries instantly.</p><div class="proj-tags"><span class="proj-tag">Live AI</span><span class="proj-tag">Zoom API</span></div><button class="proj-btn">View Details</button></div>
     <div class="proj-card" data-p="voice"><span class="proj-ico">🤖</span><div class="proj-name">AI Voice Agents</div><p class="proj-desc">Conversational voice agents for automated customer service and lead qualification using VAPI and LLM integration.</p><div class="proj-tags"><span class="proj-tag">VAPI</span><span class="proj-tag">Voice AI</span></div><button class="proj-btn">View Details</button></div>
     <div class="proj-card" data-p="car"><span class="proj-ico">🚗</span><div class="proj-name">Car Dealership Chatbot</div><p class="proj-desc">High-volume AI chatbot with real-time inventory lookups and automated sales qualification for automotive retail.</p><div class="proj-tags"><span class="proj-tag">RAG</span><span class="proj-tag">Chatbot</span></div><button class="proj-btn">View Details</button></div>
-    <div class="proj-card" data-p="video"><span class="proj-ico">🎬</span><div class="proj-name">Video Short Generator</div><p class="proj-desc">End-to-end pipeline for generating and auto-publishing short-form video content to social platforms.</p><div class="proj-tags"><span class="proj-tag">AI Pipeline</span><span class="proj-tag">Social</span></div><button class="proj-btn">View Details</button></div>
-    <div class="proj-card" data-p="hr"><span class="proj-ico">📋</span><div class="proj-name">HR AI Evaluator</div><p class="proj-desc">Automated job posting distribution with AI-driven candidate screening and evaluation workflows.</p><div class="proj-tags"><span class="proj-tag">LLM</span><span class="proj-tag">Automation</span></div><button class="proj-btn">View Details</button></div>
+    <div class="proj-card" data-p="video"><span class="proj-ico">🎬</span><div class="proj-name">AI Social Media Shorts Generator</div><p class="proj-desc">LLM pipeline that extracts viral segments, engineers hooks, and outputs platform-optimized short-form scripts for TikTok, Reels, and YouTube Shorts.</p><div class="proj-tags"><span class="proj-tag">N8N</span><span class="proj-tag">LLM</span><span class="proj-tag">Content AI</span></div><button class="proj-btn">View Details</button></div>
+    <div class="proj-card" data-p="hr"><span class="proj-ico">📋</span><div class="proj-name">HR Job Posting & AI Evaluator</div><p class="proj-desc">Automated recruitment pipeline — from multi-platform job posting to AI resume scoring, instant candidate emails, and automated interview scheduling.</p><div class="proj-tags"><span class="proj-tag">N8N</span><span class="proj-tag">LLM</span><span class="proj-tag">Automation</span></div><button class="proj-btn">View Details</button></div>
     <div class="proj-card" data-p="finance"><span class="proj-ico">📊</span><div class="proj-name">Financial Reports System</div><p class="proj-desc">Automated financial reporting with real-time data aggregation and Google Sheets integration.</p><div class="proj-tags"><span class="proj-tag">Webhooks</span><span class="proj-tag">Sheets</span></div><button class="proj-btn">View Details</button></div>
     <div class="proj-card" data-p="rag"><span class="proj-ico">🔎</span><div class="proj-name">RAG Knowledge Agents</div><p class="proj-desc">Retrieval-augmented generation for intelligent document search and customer support automation.</p><div class="proj-tags"><span class="proj-tag">RAG</span><span class="proj-tag">OpenAI</span></div><button class="proj-btn">View Details</button></div>
-    <div class="proj-card" data-p="email"><span class="proj-ico">✉</span><div class="proj-name">Email Assistant</div><p class="proj-desc">AI-powered personalized client communications at scale with human-level personalization.</p><div class="proj-tags"><span class="proj-tag">LLM</span><span class="proj-tag">Email</span></div><button class="proj-btn">View Details</button></div>
+    <div class="proj-card" data-p="email"><span class="proj-ico">✉</span><div class="proj-name">AI Email Automation System</div><p class="proj-desc">Multi-agent email system with intent classification, RAG retrieval, booking execution, and automated HTML draft generation.</p><div class="proj-tags"><span class="proj-tag">N8N</span><span class="proj-tag">RAG</span><span class="proj-tag">LangChain</span></div><button class="proj-btn">View Details</button></div>
     <div class="proj-card" data-p="scraper"><span class="proj-ico">🦅</span><div class="proj-name">Twitter/X Scraper</div><p class="proj-desc">Custom data extraction tool for market research and competitive analysis at scale.</p><div class="proj-tags"><span class="proj-tag">Scraping</span><span class="proj-tag">Python</span></div><button class="proj-btn">View Details</button></div>
+    <div class="proj-card" data-p="newsletter"><span class="proj-ico">📰</span><div class="proj-name">AI Newsletter Generator</div><p class="proj-desc">Automated pipeline that curates content from multiple sources, generates AI-written newsletter sections, and outputs a formatted HTML email — ready to send.</p><div class="proj-tags"><span class="proj-tag">N8N</span><span class="proj-tag">LLM</span><span class="proj-tag">Email</span></div><button class="proj-btn">View Details</button></div>
+    <div class="proj-card" data-p="outreach"><span class="proj-ico">🎯</span><div class="proj-name">LinkedIn Scraper & Outreach Booster</div><p class="proj-desc">End-to-end lead generation system — Google CSE finds profiles, Apify scrapes data, Tavily enriches with company intel, GPT writes hyper-personalized outreach in ~20 seconds per lead.</p><div class="proj-tags"><span class="proj-tag">N8N</span><span class="proj-tag">Apify</span><span class="proj-tag">GPT</span><span class="proj-tag">Tavily</span></div><button class="proj-btn">View Details</button></div>
+    <div class="proj-card" data-p="lianalyzer"><span class="proj-ico">📈</span><div class="proj-name">LinkedIn Company Post Analyzer</div><p class="proj-desc">Proxy-backed AI scraper that pulls competitor LinkedIn posts, calculates engagement benchmarks, and stores structured analytics in Google Sheets — fully automated.</p><div class="proj-tags"><span class="proj-tag">Bright Data</span><span class="proj-tag">OpenAI</span><span class="proj-tag">N8N</span></div><button class="proj-btn">View Details</button></div>
   </div>
 </section>
 
@@ -1449,6 +1532,7 @@ footer{
     <button class="m-close" id="m-close">×</button>
     <h3 class="m-title" id="m-title"></h3>
     <div class="m-sub" id="m-sub"></div>
+    <div class="m-img-wrap" id="m-img-wrap" style="display:none"><img class="m-img" id="m-img" src="" alt="" loading="lazy"><span class="m-img-hint">⤢ View Full Size</span></div>
     <div class="m-sec"><div class="m-sec-ttl">Overview</div><p class="m-text" id="m-overview"></p></div>
     <div class="m-nda">⚠️ Some technical details are protected under NDA.</div>
     <div class="m-sec"><div class="m-sec-ttl">System Architecture</div><div id="m-flow"></div></div>
@@ -1613,6 +1697,8 @@ footer{
   <span class="ft"><span class="ft-dot"></span>Available for projects</span>
 </footer>
 
+<div id="img-lb"><button id="img-lb-close">×</button><img src="" alt=""></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script>
 /* ─── THREE.JS BRAIN ─── */
 (function(){
@@ -1695,11 +1781,11 @@ footer{
 
   const synGold = new THREE.LineSegments(
     makeSynapses(180, 0.38),
-    new THREE.LineBasicMaterial({color:0xc9a227,transparent:true,opacity:.7})
+    new THREE.LineBasicMaterial({color:0x38bdf8,transparent:true,opacity:.7})
   );
   const synGold2 = new THREE.LineSegments(
     makeSynapses(80, 0.22),
-    new THREE.LineBasicMaterial({color:0xe0b84a,transparent:true,opacity:.3})
+    new THREE.LineBasicMaterial({color:0x60cdff,transparent:true,opacity:.3})
   );
   const synWhite = new THREE.LineSegments(
     makeSynapses(100, 0.3),
@@ -1723,7 +1809,7 @@ footer{
     const pGeo = new THREE.BufferGeometry();
     pGeo.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3));
     const pMat = new THREE.PointsMaterial({
-      color: 0xc9a227, size: 0.016, transparent: true, opacity: 0.5,
+      color: 0x38bdf8, size: 0.016, transparent: true, opacity: 0.5,
       sizeAttenuation: true
     });
     const particles = new THREE.Points(pGeo, pMat);
@@ -1740,7 +1826,7 @@ footer{
 
   const haloGeo = new THREE.SphereGeometry(1.22, 16, 16);
   const haloMat = new THREE.MeshBasicMaterial({
-    color: 0x1a1408, transparent:true, opacity:.06, side:THREE.BackSide
+    color: 0x040a14, transparent:true, opacity:.06, side:THREE.BackSide
   });
   scene.add(new THREE.Mesh(haloGeo, haloMat));
 
@@ -1760,24 +1846,26 @@ footer{
   window.addEventListener('scroll',()=>{
     const heroH=hero.clientHeight;
     targetScroll=Math.min(window.scrollY/heroH,1);
-  });
+  },{passive:true});
   window.addEventListener('mousemove',e=>{
     tmx=e.clientX/window.innerWidth;
     tmy=e.clientY/window.innerHeight;
-  });
+  },{passive:true});
 
   function flashSynapse(){
     const targets = [synGold, synGold2];
     const tgt = targets[Math.floor(Math.random()*targets.length)];
     const mat = tgt.material;
     const base = tgt === synGold ? 0.7 : 0.3;
-    let start = Date.now();
+    const start = performance.now();
     const dur = 500;
-    const id = setInterval(()=>{
-      const p = (Date.now()-start)/dur;
-      if(p>=1){mat.opacity=base;clearInterval(id);return;}
+    function step(now){
+      const p = Math.min((now-start)/dur,1);
       mat.opacity = base + Math.sin(p*Math.PI)*0.25;
-    },16);
+      if(p<1) requestAnimationFrame(step);
+      else mat.opacity=base;
+    }
+    requestAnimationFrame(step);
   }
   setInterval(flashSynapse, 1800);
   setInterval(flashSynapse, 3200);
@@ -1835,19 +1923,14 @@ footer{
   const start=Date.now();
   const BASE=2.3;
   const RATE=0.00000048;
-  function tick(){
-    const elapsed=Date.now()-start;
-    el.textContent=(BASE+elapsed*RATE).toFixed(1);
-    requestAnimationFrame(tick);
-  }
-  tick();
+  setInterval(()=>{el.textContent=(BASE+(Date.now()-start)*RATE).toFixed(1);},200);
 })();
 
 /* ─── CURSOR ─── */
 const dot=document.getElementById('cur');
 const ring=document.getElementById('curR');
 let _mx=0,_my=0,_rx=0,_ry=0;
-document.addEventListener('mousemove',e=>{_mx=e.clientX;_my=e.clientY;dot.style.left=_mx+'px';dot.style.top=_my+'px';});
+document.addEventListener('mousemove',e=>{_mx=e.clientX;_my=e.clientY;dot.style.left=_mx+'px';dot.style.top=_my+'px';},{passive:true});
 (function loop(){_rx+=(_mx-_rx)*.1;_ry+=(_my-_ry)*.1;ring.style.left=_rx+'px';ring.style.top=_ry+'px';requestAnimationFrame(loop);})();
 document.querySelectorAll('a,button,.scard,.sf-btn,.proj-card,.exp-company-logo,.exp-stats,.ct-contact,.ct-pain,.ct-cta').forEach(el=>{
   el.addEventListener('mouseenter',()=>document.body.classList.add('hov'));
@@ -1859,7 +1942,7 @@ window.addEventListener('load',()=>document.getElementById('loader').classList.a
 
 /* ─── NAV SCROLL ─── */
 const nav=document.getElementById('nav');
-window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>60));
+window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>60),{passive:true});
 
 /* ─── SCROLL REVEAL ─── */
 const obs=new IntersectionObserver(entries=>{
@@ -1944,32 +2027,56 @@ document.querySelectorAll('.sr,.sr-left,.sr-right,.sr-scale').forEach(el=>obs.ob
 /* ─── EXPERIENCE ANIMATION ─── */
 (function(){
   const entries = Array.from(document.querySelectorAll('.exp-entry'));
-  entries.forEach((entry,i)=>{
-    const obs = new IntersectionObserver(([e])=>{
+  const expObs = new IntersectionObserver(entries2=>{
+    entries2.forEach(e=>{
       if(e.isIntersecting){
-        setTimeout(()=>entry.classList.add('exp-vis'), i * 150);
-        obs.disconnect();
+        const i=entries.indexOf(e.target);
+        setTimeout(()=>e.target.classList.add('exp-vis'), i*150);
+        expObs.unobserve(e.target);
       }
-    },{threshold:.1});
-    obs.observe(entry);
-  });
+    });
+  },{threshold:.1});
+  entries.forEach(e=>expObs.observe(e));
 })();
 
-/* ─── PROJECT DEAL ANIMATION ─── */
+/* ─── PROJECT DEAL ANIMATION (directional entry) ─── */
 (function(){
   const cards = Array.from(document.querySelectorAll('.proj-card'));
-  let fired = false;
-  const projObs = new IntersectionObserver(entries=>{
+  /* assign direction per column: col0=left, col1=up, col2=right */
+  cards.forEach((card,i)=>{
+    const col=i%3;
+    if(col===0) card.style.setProperty('--px','-48px');
+    else if(col===2) card.style.setProperty('--px','48px');
+  });
+  let fired=false;
+  const projObs=new IntersectionObserver(entries=>{
     if(!fired && entries[0].isIntersecting){
-      fired = true;
-      cards.forEach((card, i)=>{
-        setTimeout(()=> card.classList.add('dealt'), i * 80);
-      });
+      fired=true;
+      cards.forEach((card,i)=>{setTimeout(()=>card.classList.add('dealt'),i*90);});
       projObs.disconnect();
     }
   },{threshold:.05});
-  const grid = document.querySelector('.proj-grid');
+  const grid=document.querySelector('.proj-grid');
   if(grid) projObs.observe(grid);
+})();
+
+/* ─── SCROLL PROGRESS BAR ─── */
+(function(){
+  const sp=document.getElementById('sp');
+  window.addEventListener('scroll',()=>{
+    const h=document.documentElement.scrollHeight-window.innerHeight;
+    sp.style.width=(window.scrollY/h*100)+'%';
+  },{passive:true});
+})();
+
+/* ─── EXPERIENCE TIMELINE DRAW ─── */
+(function(){
+  const tl=document.querySelector('.exp-tl-line');
+  if(!tl) return;
+  const tlObs=new IntersectionObserver(([e])=>{
+    if(e.isIntersecting){tl.classList.add('tl-drawn');tlObs.disconnect();}
+  },{threshold:.05});
+  tlObs.observe(tl.parentElement);
 })();
 
 /* ─── STAT COUNTER ANIMATION ─── */
@@ -2015,12 +2122,15 @@ const pdata={
   zoom:{title:"Live Zoom Transcription System",sub:"Real-time Audio · OpenAI Whisper · Google Slides API",overview:"A sophisticated real-time transcription system integrated with Zoom meetings to provide live transcription, intelligent summarization, and automated presentation generation.",flow:["Zoom Meeting Join (Bot participant)","Real-time Audio Stream Capture","OpenAI Whisper Transcription","Contextual Analysis & Summarization","Auto-generated Google Slides","Email Distribution"],feats:["Real-time transcription with <3s latency","Speaker diarization and identification","Automatic action item extraction","Live Google Slides generation","Meeting summary email automation"],results:"Reduced meeting documentation time by 95%. Client saved 10+ hours per week on manual note-taking."},
   voice:{title:"AI Voice Agents (VAPI)",sub:"VAPI · LLM Integration · Conversational AI",overview:"Enterprise-grade voice agents built on VAPI platform with custom LLM integration for natural conversation handling.",flow:["Incoming/Outgoing Call Trigger","VAPI Voice Processing","LLM Context Understanding","Dynamic Response Generation","CRM Data Logging","Call Summary & Analytics"],feats:["Natural language understanding","Multi-language support","Real-time sentiment analysis","Seamless human handoff","Custom voice personality"],results:"Handled 10,000+ conversations monthly with 85% resolution rate. Reduced call center costs by 60%."},
   car:{title:"Car Dealership Chatbot",sub:"RAG · Inventory API · Lead Qualification",overview:"High-volume AI chatbot system integrated with dealership inventory management for real-time vehicle lookups and sales qualification.",flow:["Customer Inquiry Received","Intent Classification (LLM)","Inventory Database Query","RAG Knowledge Base Search","Personalized Response Generation","Lead Scoring & CRM Update"],feats:["Real-time inventory synchronization","Natural language vehicle search","Financing option calculations","Test drive scheduling automation","Lead qualification scoring"],results:"Increased qualified leads by 45% and reduced response time from hours to seconds."},
-  video:{title:"Auto Video Short Generator",sub:"Content Pipeline · Social Media APIs · AI Editing",overview:"Fully automated content creation pipeline that generates, edits, and publishes short-form video content across social platforms.",flow:["Content Source Input (RSS/Upload)","AI Script Generation","Video Compilation & Editing","Auto-caption Generation","Platform Optimization","Scheduled Publishing"],feats:["AI-powered video editing","Automatic subtitle generation","Multi-platform formatting","Trending audio integration","Thumbnail auto-generation"],results:"Produced 500+ videos monthly across 5 brands. Increased social engagement by 200%."},
-  hr:{title:"HR AI Candidate Evaluator",sub:"Resume Parsing · LLM Evaluation · Workflow Automation",overview:"End-to-end recruitment automation system handling job posting distribution, resume screening, and interview scheduling.",flow:["Job Posting Created","Multi-platform Distribution","Resume Ingestion & Parsing","AI Candidate Scoring","Interview Scheduling","Feedback Collection"],feats:["Intelligent resume parsing","Skill matching algorithms","Automated email sequences","Interview calendar integration","Candidate ranking system"],results:"Reduced time-to-hire by 70%. HR team saved 25+ hours weekly on screening tasks."},
-  finance:{title:"Financial Reports System",sub:"Webhook Pipelines · Data Aggregation · Live Dashboards",overview:"Automated financial reporting infrastructure for debt management operations with real-time data collection and visualization.",flow:["Payment Gateway Webhooks","Data Validation & Cleaning","Real-time Calculation Engine","Google Sheets Sync","Report Generation","Stakeholder Distribution"],feats:["Real-time payment tracking","Automated reconciliation","Custom report templates","Multi-currency support","Compliance audit trails"],results:"Eliminated manual reporting entirely. Reduced reporting errors by 99%."},
+  video:{img:"https://drumhierny.com/wp-content/uploads/2026/02/Social-Media-Shorts-Generation.png",title:"AI Social Media Shorts Generator",sub:"N8N · LLM Content Extraction · Engagement Optimization · Short-Form Scripting",overview:"Automated content repurposing system that transforms long-form material into platform-optimized short-form scripts. The AI doesn't summarize — it filters for engagement potential, identifying viral segments, strong hooks, and high-retention moments. Output is a structured, ready-to-post script engineered for TikTok, Reels, and YouTube Shorts.",flow:["Input Trigger — long-form text, video transcript, or content topic received","AI Engagement Extraction — LLM scans for viral segments, strong hooks, and high-retention moments","Hook Engineering — first 2–3 seconds restructured for maximum stop-scroll impact","Script Structuring — output formatted as: Hook → Core Message → CTA → Hashtags","Tone & Style Enforcement — short sentences, emotional triggers, punchy conversational delivery applied","Platform Optimization — content adapted for TikTok / Reels / YouTube Shorts format requirements","Output Delivery — structured script (or multiple variations) returned, ready to post or forward to next workflow"],feats:["Engagement-based extraction — AI identifies viral potential, not just summaries","Hook-first structure enforced on every output","Tone rules applied: short sentences, emotional language, high-retention formatting","Multi-variation output — generates multiple script options per input","Platform-specific formatting (TikTok, Reels, YouTube Shorts)","Fully repeatable pipeline — consistent quality at any volume","Can be chained into a broader content production workflow","Prompt-engineered transformation engine — precise, controlled creative output"],results:"Turned long-form content into ready-to-post short-form scripts in seconds. Eliminated manual content repurposing entirely. Scalable to any content volume with consistent structure and engagement-optimized output on every run."},
+  hr:{img:"https://drumhierny.com/wp-content/uploads/2026/02/HR-job-posting.png",title:"HR AI Job Posting & Candidate Evaluation System",sub:"N8N · LLM Screening · Multi-Platform Distribution · Automated Outreach",overview:"End-to-end recruitment automation system built to eliminate manual HR overhead. A single job posting triggers multi-platform distribution, every incoming application is parsed and scored by an LLM, and candidates are automatically moved through the pipeline — shortlisted, rejected, or scheduled — without a human touching a single email or spreadsheet.",flow:["Job Posting Trigger — HR creates role; workflow activates automatically","Multi-Platform Distribution — posting pushed to LinkedIn, Indeed, and job boards via API","Application Ingestion — incoming resumes collected and parsed into structured data","LLM Resume Scoring — AI evaluates skills match, experience fit, and role requirements","Candidate Classification — sorted into: Strong Fit / Review / Reject buckets","Automated Email Outreach — rejection emails sent instantly; shortlist candidates receive interview invite","Interview Scheduling — calendar link sent; availability captured and confirmed automatically","Feedback Loop — post-interview notes ingested; final decision triggers offer or rejection flow"],feats:["Single trigger distributes job post to multiple platforms simultaneously","LLM-powered resume parsing extracts skills, experience, and education into structured JSON","Scoring rubric customized per role — no generic matching","Instant automated rejection emails with professional tone (no candidate left waiting)","Interview scheduling fully automated — no back-and-forth calendar coordination","Pipeline stage tracking — every candidate state logged throughout the process","Scales to any volume — 10 or 1,000 applicants handled identically","Zero manual email drafting for HR team at any stage"],results:"Reduced time-to-hire by 70%. HR team recovered 25+ hours weekly previously spent on manual screening, email drafting, and scheduling. Candidate response time dropped from days to under 5 minutes for every application received."},
+  finance:{img:"https://drumhierny.com/wp-content/uploads/2026/02/Payment-Processing-and-Order-Tracking-with-Google-Sheets.png",title:"Financial Reports System",sub:"Webhook Pipelines · Data Aggregation · Live Dashboards",overview:"Automated financial reporting infrastructure for debt management operations with real-time data collection and visualization.",flow:["Payment Gateway Webhooks","Data Validation & Cleaning","Real-time Calculation Engine","Google Sheets Sync","Report Generation","Stakeholder Distribution"],feats:["Real-time payment tracking","Automated reconciliation","Custom report templates","Multi-currency support","Compliance audit trails"],results:"Eliminated manual reporting entirely. Reduced reporting errors by 99%."},
   rag:{title:"RAG Knowledge Agents",sub:"Vector Databases · Embeddings · Document AI",overview:"Retrieval-augmented generation systems for enterprise knowledge management and intelligent document search.",flow:["Document Ingestion","Text Chunking & Embedding","Vector Database Storage","Query Processing","Context Retrieval (Top-K)","Augmented Generation"],feats:["Multi-format document support","Semantic search capabilities","Source citation generation","Continuous learning system","Access control integration"],results:"Reduced support ticket volume by 50%. Knowledge base accuracy maintained at 95%+."},
-  email:{title:"Personalized Email Assistant",sub:"LLM Personalization · Template Engine · Automation",overview:"AI-driven email automation creating highly personalized communications at scale with human-like tone.",flow:["Contact List Import","Data Enrichment (APIs)","Personalization Analysis","Content Generation (LLM)","A/B Testing & Optimization","Delivery & Tracking"],feats:["Dynamic content generation","Sentiment-aware writing","Subject line optimization","Send-time optimization","Engagement tracking"],results:"Achieved 45% open rates vs 21% industry average. Scaled to 10,000+ contacts monthly."},
-  scraper:{title:"Twitter/X Data Scraper",sub:"Python · Data Pipeline · Sentiment Analysis",overview:"Robust social media intelligence platform for competitive analysis and market research.",flow:["Target Profile/Hashtag Input","API/Data Extraction","Data Cleaning & Structuring","Sentiment Analysis (LLM)","Trend Identification","Report Generation"],feats:["Real-time data collection","Sentiment trend analysis","Influencer identification","Competitive benchmarking","Hashtag performance tracking"],results:"Processed 1M+ tweets monthly for market research clients."}
+  email:{img:"https://drumhierny.com/wp-content/uploads/2026/02/Email-Assistant.png",title:"AI Email Automation System",sub:"N8N · Microsoft Outlook · LangChain · Supabase Vector DB · RAG",overview:"Enterprise-grade AI email automation system built for a hospitality client. Every unread email is picked up in real-time, filtered, and passed through a 6-category LangChain intent classifier. Each category routes to a dedicated AI agent that retrieves factual context from a Supabase RAG vector store, generates a structured HTML reply, and saves it as an Outlook draft — with a full booking execution layer for spa reservation requests.",flow:["Outlook Trigger — polls every minute, pulls all unread emails","Filter Layer — conditional nodes strip out marketing & draft emails","LangChain Classifier — categorizes intent: High Priority, Booking Inquiry, Spa Add-on, General Inquiry, System Notification, or Booking Execution","Multi-Agent Routing — each intent dispatched to its own dedicated AI agent","RAG Retrieval — Supabase vector store + OpenAI embeddings surface relevant knowledge","Response Generation — structured HTML reply built with strict factual grounding (no hallucination)","JS Processing Node — cleans markdown artifacts, extracts subject + body into clean JSON","Outlook Draft Creation — final HTML saved as draft for human review before sending"],feats:["6-category LangChain intent classifier for precise routing","Dedicated agents per intent: High Priority, General Inquiry, Spa Booking","Supabase RAG vector store with OpenAI embeddings — facts only, no invention","Booking execution agent: extracts service, date, time, guest info → validates → books autonomously","Clarification email auto-sent when required booking fields are missing","Memory buffer window for multi-email thread context awareness","JavaScript node structures AI output into clean HTML + subject line","Human-in-the-loop by design — all replies saved as drafts, never auto-sent"],results:"Eliminated manual email drafting for a hospitality client operating 24/7. Guest emails go from inbox to a ready-to-send structured HTML draft in under 2 minutes. Spa bookings are executed autonomously end-to-end, including validation and confirmation with payment link — with zero risk of accidental sends."},
+  scraper:{title:"Twitter/X Data Scraper",sub:"Python · Data Pipeline · Sentiment Analysis",overview:"Robust social media intelligence platform for competitive analysis and market research.",flow:["Target Profile/Hashtag Input","API/Data Extraction","Data Cleaning & Structuring","Sentiment Analysis (LLM)","Trend Identification","Report Generation"],feats:["Real-time data collection","Sentiment trend analysis","Influencer identification","Competitive benchmarking","Hashtag performance tracking"],results:"Processed 1M+ tweets monthly for market research clients."},
+  newsletter:{img:"https://drumhierny.com/wp-content/uploads/2026/02/Newsletter-Generator-.png",title:"AI Newsletter Generator",sub:"N8N · LLM Content Curation · HTML Email Generation · Automated Distribution",overview:"Automated newsletter production system that eliminates manual content curation and writing. The workflow pulls content from configured sources, uses an LLM to select, summarize, and write each newsletter section in a consistent voice, assembles a fully formatted HTML email, and queues it for delivery — without a human writing a single word.",flow:["Content Source Trigger — RSS feeds, web sources, or manual input activate the workflow","Multi-Source Aggregation — content collected and normalized from all configured channels","LLM Curation Layer — AI selects most relevant and engaging pieces based on topic and audience","Section Writing — each newsletter block (intro, main stories, tips, CTA) generated with consistent tone","HTML Assembly — all sections compiled into a clean, styled email template","Quality Check Node — output reviewed for structure, length, and formatting","Distribution — final HTML email sent or queued via email platform"],feats:["Multi-source content ingestion — RSS, web, or manual input all supported","LLM curation selects content by relevance and engagement potential","Consistent brand voice enforced across every section automatically","Full HTML email output — no manual formatting or template editing","Modular section structure — intro, stories, tips, and CTA all independently generated","Runs on schedule — fully hands-off after initial setup","Scales to any frequency: daily, weekly, or custom cadence","Zero manual writing — AI handles every word, every time"],results:"Reduced newsletter production time from hours to minutes. Consistent output quality on every send with zero manual writing or formatting — enabling a regular publishing cadence that would otherwise require a dedicated content team."},
+  outreach:{img:"https://drumhierny.com/wp-content/uploads/2026/02/LinkedIn-Scraper-Outreach-Booster.png",title:"LinkedIn Scraper & Outreach Booster",sub:"N8N · Google CSE · Apify · GPT-4 · Tavily · Deduplication Engine",overview:"Production-grade LinkedIn lead generation system that goes from search criteria to a hyper-personalized outreach message in ~20 seconds per lead. Instead of scraping LinkedIn directly (high-risk), it uses Google Custom Search Engine to safely retrieve public profile URLs, then chains Apify scraping, GPT summarization, and Tavily company intelligence into a single enrichment pipeline — ending with dynamic, personalized cold messages at scale.",flow:["Search Form Input — user provides job title, industry, location, keywords, and filters","Google CSE Query — searches site:linkedin.com/in with targeting parameters; returns public profile URLs","Pagination + Deduplication — system checks database for existing URLs, paginates for more results, skips already-processed leads","Apify Profile Scraper — each URL sent to Apify; extracts name, title, company, experience, about section, skills, location","GPT Profile Condensation — raw profile data summarized into key highlights, positioning insights, and personalization hooks","Tavily Company Intelligence — company name used to pull recent news, growth signals, and strategic positioning; GPT condenses output","GPT Outreach Generation — profile summary + company intel + user offer + CTA merged into hyper-personalized LinkedIn DM or cold email"],feats:["Google CSE targeting — safer than direct LinkedIn scraping, fully scalable","Deduplication engine prevents reprocessing leads already in the database","Apify integration converts unstructured LinkedIn profiles into clean structured fields","GPT intelligence layer — not data dumping, but extracting personalization angles","Tavily web enrichment adds real-time company context (news, growth signals, positioning)","Dynamic outreach generation — every message unique, not template-based","~20 second end-to-end execution per lead: scrape → enrich → summarize → generate","Repeatable acquisition engine — not a one-time script, runs on demand at any volume"],results:"Turned a manual 30-minute prospecting process into a 20-second automated pipeline. Every lead arrives pre-enriched with personal and company intelligence, with a ready-to-send personalized message — enabling outreach at scale without sacrificing quality."},
+  lianalyzer:{title:"LinkedIn Company Post Analyzer",sub:"N8N · Bright Data MCP · OpenAI · Google Sheets · Proxy Scraping",overview:"Automated competitive intelligence pipeline that scrapes a LinkedIn company page's latest posts using proxy-backed AI browsing, computes engagement benchmarks, and stores structured analytics across a dual-layer Google Sheets database. Built for repeatable, scalable competitor research without manual effort.",flow:["Manual Trigger + URL Input — workflow activated with target LinkedIn company URL stored in Set node","AI Agent Instruction — OpenAI model receives: fetch latest 5 posts from this company page","Bright Data MCP Scraping — mobile IP proxies load the page like a real browser, bypassing anti-bot systems; raw HTML extracted","AI Parsing Layer — GPT structures scraped content into clean JSON: post text, date, likes, comments, shares","Engagement Computation — JavaScript node loops through 5 posts, calculates averageLikes and averageComments, outputs performance baseline","Metrics Storage → Sheet 1 — aggregated engagement averages saved to Google Sheets for longitudinal tracking","Post Archive → Sheet 2 — each individual post (date, content, engagement) saved in structured format for detailed reference"],feats:["Bright Data MCP mobile proxies bypass LinkedIn anti-bot detection reliably","AI reasoning layer parses unstructured HTML into clean, structured JSON","Dual-layer Google Sheets storage: Sheet 1 for metrics, Sheet 2 for post-level archive","Engagement baseline calculation — averageLikes and averageComments per company","Intentional manual trigger — controlled execution avoids unnecessary scraping costs","Reusable for any company — swap URL, re-run, get fresh data instantly","Longitudinal database builds over time — track competitor content performance trends","Fully automated: zero manual copy-paste, zero screenshots, zero spreadsheet work"],results:"Replaced manual LinkedIn monitoring with an automated competitive intelligence system. Any competitor's last 5 posts, engagement benchmarks, and archived content captured and stored in under 60 seconds — building a growing analytics database with every run."}
 };
 
 const modal=document.getElementById('modal');
@@ -2034,6 +2144,8 @@ document.querySelectorAll('.proj-card').forEach(card=>{
     document.getElementById('m-results').textContent=d.results;
     document.getElementById('m-flow').innerHTML=d.flow.map((s,i)=>`<div class="m-flow-step"><span class="m-flow-n">0${i+1}</span><span>${s}</span></div>`).join('');
     document.getElementById('m-feats').innerHTML=d.feats.map(f=>`<li>${f}</li>`).join('');
+    const imgWrap=document.getElementById('m-img-wrap');const imgEl=document.getElementById('m-img');
+    if(d.img){imgEl.src=d.img;imgEl.alt=d.title;imgWrap.style.display='block';}else{imgWrap.style.display='none';imgEl.src='';}
     modal.classList.add('open');
     document.body.style.overflow='hidden';
   });
@@ -2045,15 +2157,37 @@ function closeModal(){
 }
 document.getElementById('m-close').addEventListener('click',closeModal);
 modal.addEventListener('click',e=>{if(e.target===modal)closeModal();});
-document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal();});
+
+/* ─── IMAGE LIGHTBOX ─── */
+const imgLb=document.getElementById('img-lb');
+const imgLbImg=imgLb.querySelector('img');
+document.getElementById('m-img-wrap').addEventListener('click',()=>{
+  const src=document.getElementById('m-img').src;
+  if(!src) return;
+  imgLbImg.src=src;
+  imgLb.classList.add('open');
+  document.body.style.overflow='hidden';
+});
+function closeLb(){imgLb.classList.remove('open');document.body.style.overflow=modal.classList.contains('open')?'hidden':'';}
+document.getElementById('img-lb-close').addEventListener('click',closeLb);
+imgLb.addEventListener('click',e=>{if(e.target===imgLb)closeLb();});
+document.addEventListener('keydown',e=>{
+  if(e.key==='Escape'){if(imgLb.classList.contains('open'))closeLb();else closeModal();}
+});
 
 /* ─── MOUSE PARALLAX FOR HERO ─── */
 const heroCenter=document.querySelector('.hero-center');
+let _hrafPending=false;
 document.addEventListener('mousemove',e=>{
-  const px=(e.clientX/window.innerWidth-.5)*12;
-  const py=(e.clientY/window.innerHeight-.5)*8;
-  heroCenter.style.transform=`translate(${px}px,${py}px)`;
-});
+  if(_hrafPending) return;
+  _hrafPending=true;
+  requestAnimationFrame(()=>{
+    const px=(e.clientX/window.innerWidth-.5)*12;
+    const py=(e.clientY/window.innerHeight-.5)*8;
+    heroCenter.style.transform=`translate(${px}px,${py}px)`;
+    _hrafPending=false;
+  });
+},{passive:true});
 
 /* ─── MOBILE NAV HAMBURGER ─── */
 (function(){
